@@ -1,5 +1,6 @@
 #include "game.hpp"
 
+// INITIALIZING GAME INSTANCE
 fr0sty::Game* fr0sty::Game::_instance = nullptr;
 
 namespace fr0sty {
@@ -8,6 +9,7 @@ namespace fr0sty {
         Game::init();
         _clock.start();
         
+        Game::sys_print("STARTING!", true);
 
         while (Game::running()) {
             Game::events();
