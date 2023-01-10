@@ -6,7 +6,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#include "SETTINGS.hpp"
+#include "settings.hpp"
 #include "clock.hpp"
 
 namespace fr0sty {
