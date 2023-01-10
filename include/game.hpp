@@ -87,19 +87,19 @@ namespace fr0sty {
 
 
         public:
-            /// @brief A method for Engine Output
+            /// @brief A method for Engine output
             /// @param msg The string to be printed
             /// @param endl end line = true 
             void sys_print(const char* msg, bool endl) {if (endl) {std::cout << "ROACH: " << msg << std::endl;} else {std::cout << msg;}}
-            /// @brief A method for Engine Output
+            /// @brief A method for Engine output
             /// @param msg The integer to be printed
             /// @param endl end line = true 
             void sys_print(int msg, bool endl) {if (endl) {std::cout << "ROACH: " << msg << std::endl;} else {std::cout << msg;}}
-            /// @brief A method for Engine Output
+            /// @brief A method for Engine output
             /// @param msg Your message
             /// @param endl end line = true 
             void sys_print(float msg, bool endl) {if (endl) {std::cout << "ROACH: " << msg << std::endl;} else {std::cout << msg;}}
-            /// @brief A method for Engine Output
+            /// @brief A method for Engine output
             /// @param msg Write message here
             /// @param endl Set it to true for new line 
             void sys_print(uint32_t msg, bool endl) {if (endl) {std::cout << "ROACH: " << msg << std::endl;} else {std::cout << msg;}}
