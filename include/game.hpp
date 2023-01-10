@@ -12,6 +12,7 @@ namespace fr0sty {
 
     enum class STATE { PLAY, SPLASH, MENU };
 
+    /// @brief A struct for handling and updating tick time and game time
     struct Clock {
         private:
             int _startTime;
