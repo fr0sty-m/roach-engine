@@ -46,12 +46,6 @@ namespace fr0sty {
             Game::sys_print("FAILED TO CREATE RENDERER!", true);
             return _running = false;
         }
-
-
-        img = IMG_LoadTexture(_renderer, HELLO_IMG_PATH);
-        if (img == nullptr) {
-            Game::sys_print("FAILED TO INIT IMAGE", true);
-        }
         
 
 
@@ -77,7 +71,6 @@ namespace fr0sty {
         SDL_RenderClear(_renderer);
 
         // DRAW
-        SDL_RenderCopy(_renderer, img, nullptr, nullptr);
 
         
         
