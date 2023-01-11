@@ -3,7 +3,7 @@
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
-#define SCREEN_TITLE "ROACH ENGINE"
+#define SCREEN_TITLE "roach engine"
 #define FPS 120
 
 #define PLAYER_COLOR 255,0,0,255
