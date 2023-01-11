@@ -25,6 +25,7 @@ namespace fr0sty {
             SDL_Window* _window;
             SDL_Renderer* _renderer;
             SDL_Surface* _surface;
+            SDL_Texture *img;
 
             Clock _clock;
             float _dt;
@@ -51,6 +52,8 @@ namespace fr0sty {
             /// @return Game class instance
             static Game* getInstance() { return _instance = (_instance != nullptr) ? _instance : new Game(); }
 
+            /// @brief A method for getting if game is running
+            /// @return Boolean variable
             inline bool running() { return _running; }
 
             /// @brief A method for starting

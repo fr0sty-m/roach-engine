@@ -35,7 +35,6 @@ namespace fr0sty {
 
         // CREATING WINDOW
         _window = SDL_CreateWindow(SCREEN_TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
-
         if (_window == nullptr) {
             Game::sys_print("FAILED TO CREATE WINDOW!", true);
             return _running = false;
@@ -47,6 +46,14 @@ namespace fr0sty {
             Game::sys_print("FAILED TO CREATE RENDERER!", true);
             return _running = false;
         }
+
+
+        img = IMG_LoadTexture(_renderer, HELLO_IMG_PATH);
+        if (img == nullptr) {
+            Game::sys_print("FAILED TO INIT IMAGE", true);
+        }
+        
+
 
         return _running = true;
     }
@@ -70,7 +77,8 @@ namespace fr0sty {
         SDL_RenderClear(_renderer);
 
         // DRAW
-        
+        SDL_RenderCopy(_renderer, img, nullptr, nullptr);
+
         
         
 
