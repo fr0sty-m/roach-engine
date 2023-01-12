@@ -4,7 +4,6 @@ int main(int argc, char* argv[]){
     
     fr0sty::Game::getInstance()->sys_print("STARTING!", true);
     fr0sty::Game::getInstance()->run();
-    
 
     return 0; 
 }
