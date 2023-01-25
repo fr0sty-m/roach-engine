@@ -4,6 +4,9 @@
 # Directories
 .vscode
 
+# For vim
+compile_flags.txt
+
 # Compiled Object files
 *.slo
 *.lo
