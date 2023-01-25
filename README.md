@@ -2,5 +2,4 @@
 
 ### Basic SDL2 game engine
 
-* you can update with update() method 
-* you can render with render() method
+* you can update and render with update() and render() methods 
