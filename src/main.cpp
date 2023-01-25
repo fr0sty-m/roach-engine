@@ -4,7 +4,6 @@ using namespace fr0sty;
 int main(int argc, char* argv[]){
     
     Game::getInstance()->sys_print("STARTING!", true);
-       
     Game::getInstance()->init();
               
     float dt;
@@ -13,8 +12,8 @@ int main(int argc, char* argv[]){
         Game::getInstance()->events();
         Game::getInstance()->update(dt);
 
-        dt = static_cast<float>(Game::getInstance()->getClockInstance().getTicks()) / 1000.f; 
-        Game::getInstance()->getClockInstance().start();
+        dt = static_cast<float>(Game::getInstance()->getClock().getTicks()) / 1000.f; 
+        Game::getInstance()->getClock().start();
        
         Game::getInstance()->preRender();
         Game::getInstance()->render();

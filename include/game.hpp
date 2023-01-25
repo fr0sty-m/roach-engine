@@ -83,7 +83,7 @@ namespace fr0sty {
             float getDT() { return _dt; }
 
             /// @brief A getter method for clock
-            Clock &getClockInstance() { return _clock; }
+            Clock &getClock() { return _clock; }
         
         };	// fr0sty
 }	// fr0sty

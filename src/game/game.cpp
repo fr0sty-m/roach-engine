@@ -1,7 +1,4 @@
 #include "game.hpp"
-#include "SDL/SDL_image.h"
-#include "SDL/SDL_render.h"
-#include "settings.hpp"
 
 // INITIALIZING GAME INSTANCE
 fr0sty::Game* fr0sty::Game::_instance = nullptr;
