@@ -9,6 +9,6 @@
 #define PLAYER_COLOR 255,0,0,255
 #define GAME_BG_COLOR 62, 115, 179, 255
 
-#define HELLO_IMG_PATH "assets/hello.png"
+#define HELLO_IMG_PATH "../assets/hello.png"
 
 #endif // !SETTINGS_HPP
