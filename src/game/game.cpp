@@ -1,30 +1,12 @@
 #include "game.hpp"
+#include "SDL/SDL_image.h"
+#include "SDL/SDL_render.h"
+#include "settings.hpp"
 
 // INITIALIZING GAME INSTANCE
 fr0sty::Game* fr0sty::Game::_instance = nullptr;
 
 namespace fr0sty {
-    
-    void Game::run() {
-        Game::init();
-        _clock.start();
-        
-        Game::sys_print("STARTING!", true);
-
-        while (Game::running()) {
-            Game::events();
-            Game::update(_dt);
-
-            _dt = static_cast<float>(_clock.getTicks()) / 1000.0f;
-            _clock.start();
-
-            Game::render();
-
-        }
-
-        Game::quit();
-    }
-
     bool Game::init() {
 
         // INITIALIZING SDL
@@ -47,6 +29,7 @@ namespace fr0sty {
             return _running = false;
         }
         
+        img = IMG_LoadTexture(_renderer, HELLO_IMG_PATH);
 
 
         return _running = true;
@@ -66,15 +49,18 @@ namespace fr0sty {
 
     }
 
-    void Game::render() {
+    void Game::preRender() {
         SDL_SetRenderDrawColor(_renderer, GAME_BG_COLOR);
         SDL_RenderClear(_renderer);
+    }
 
+    void Game::render() {
         // DRAW
-
+        SDL_RenderCopy(_renderer, img, NULL, NULL);
         
-        
+    }
 
+    void Game::postRender() {
         SDL_RenderPresent(_renderer);
     }
 

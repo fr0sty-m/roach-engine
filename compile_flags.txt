@@ -1,0 +1,3 @@
+-xc++
+-Iinclude
+-IC:\dev\libraries\SDL2-VSCODE\include

@@ -54,25 +54,36 @@ namespace fr0sty {
 
             /// @brief A method for getting if game is running
             /// @return Boolean variable
-            inline bool running() { return _running; }
+            bool running() { return _running; }
 
-            /// @brief A method for starting
-            void run();
-
-            /// @brief A method for initializing 
+            /// @brief A method for initializing everything
             bool init();
+            /// @brief A method for initializing variables
+            bool initVars();
+            /// @brief A method for initializing window
+            bool initWindow();
+
             /// @brief A method for cleaning and stopping 
             bool quit();
 
             /// @brief A method for updating events every frame 
             void update(float dt);
+
+            /// @brief A method for clearing scene
+            void preRender();
             /// @brief A method for rendering textures every frame
             void render();
+            /// @brief A method for showing render
+            void postRender();  
+            
             /// @brief A method for polling events
             void events();
 
             /// @brief A method for getting delta time variable 
             float getDT() { return _dt; }
+
+            /// @brief A getter method for clock
+            Clock &getClockInstance() { return _clock; }
         
         };	// fr0sty
 }	// fr0sty
